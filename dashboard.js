@@ -1,6 +1,8 @@
 import { subscribeToConfirmations, subscribeToInvitados } from "./database.js";
 
-const guestDirectorySeed = {};
+const guestDirectorySeed = {
+    "1": { nombre: "Miguel Nuñez y Familia", pases: 3 }
+};
 
 const guestDirectoriesByEvent = {
     "promocion-anthonyjr-2026": guestDirectorySeed

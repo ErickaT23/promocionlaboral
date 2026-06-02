@@ -282,8 +282,10 @@ function applyFooterConfig() {
 // CONFIGURACIÓN - Editar aquí los invitados
 // ============================================
 const GuestConfig = {
-    invitados: {},
-    invitadoDefault: { nombre: "Invitado Especial", pases: 2 },
+    invitados: {
+        "1": { nombre: "Miguel Nuñez y Familia", pases: 3 }
+    },
+    invitadoDefault: { nombre: "Miguel Nuñez y Familia", pases: 3 },
     paramId: 'id'
 };
 
@@ -372,7 +374,7 @@ const InvitadoApp = {
 
         const textoEl = document.createElement('span');
         textoEl.id = 'texto-lugares';
-        textoEl.textContent = Number(pases) === 1 ? ' lugar' : ' lugares';
+        textoEl.textContent = Number(pases) === 1 ? ' espacio para adulto' : ' espacios para adultos';
 
         lugaresEl.replaceChildren(
             document.createTextNode(parts[0] || ''),
@@ -400,7 +402,7 @@ const InvitadoApp = {
             for (let i = 1; i <= totalPases; i += 1) {
                 const option = document.createElement('option');
                 option.value = String(i);
-                option.textContent = i === 1 ? '1 invitado' : i + ' invitados';
+                option.textContent = i === 1 ? '1 adulto' : i + ' adultos';
                 guestsSelect.appendChild(option);
             }
 
@@ -938,8 +940,8 @@ function initRSVP() {
         const guestName = String((guestNameInput && guestNameInput.value) || (guestData && guestData.nombre) || 'Invitado').trim();
         const selectedPasses = Math.max(1, Number(passesValue) || 1);
         const pasesLabel = currentLang === 'en'
-            ? (selectedPasses === 1 ? 'guest' : 'guests')
-            : (selectedPasses === 1 ? 'pase' : 'pases');
+            ? (selectedPasses === 1 ? 'adult' : 'adults')
+            : (selectedPasses === 1 ? 'adulto' : 'adultos');
 
         if (respuesta === 'no') {
             return t.wa_no.replace('{nombre}', guestName);
@@ -1126,7 +1128,7 @@ const translations = {
     scroll_hint: "Desliza hacia abajo",
     names_text: "Hay logros que se construyen en silencio, con dedicación, constancia y pasión. Hoy quiero que seas parte de este momento que marca un nuevo capítulo en mi carrera.",
     invitado_mensaje: "Tu presencia hace este logro aún más especial",
-    invitado_lugares: "Hemos reservado para ti {pases} lugar(es)",
+    invitado_lugares: "Hemos reservado para ti {pases} espacios para adultos",
     countdown_titulo: ["F","alta","m","uy","p","oco","p","ara","e","l","g","ran","d","ía"],
     countdown_dias: "Días",
     countdown_horas: "Horas",
@@ -1167,13 +1169,13 @@ const translations = {
     rsvp_label_asistencia: "Asistirás",
     rsvp_si: "Sí, con mucho gusto",
     rsvp_no: "No, lamentablemente no podré",
-    rsvp_label_pases: "Número de invitados",
+    rsvp_label_pases: "Número de adultos",
     btn_rsvp: "Confirmar asistencia",
     rsvp_popup_si: "Gracias por confirmar tu asistencia. Te vemos pronto.",
     rsvp_popup_no: "Lamentamos que no puedas acompañarnos, te extrañaremos.",
     rsvp_popup_validando: "Estamos validando tu estado de confirmación. Intenta de nuevo en un momento.",
     rsvp_popup_selecciona: "Por favor selecciona si asistirás.",
-    rsvp_popup_cantidad: "Selecciona la cantidad de invitados para confirmar.",
+    rsvp_popup_cantidad: "Selecciona la cantidad de adultos para confirmar.",
     rsvp_popup_error: "No pudimos guardar tu confirmación. Intenta nuevamente.",
     rsvp_confirmed_intro: "Gracias por haber completado el formulario de asistencia.",
     rsvp_final_si: "Gracias por confirmar tu asistencia. Este mensaje quedará visible de forma permanente.",
@@ -1189,7 +1191,7 @@ const translations = {
     scroll_hint: "Scroll to explore",
     names_text: "Some achievements are built quietly — through discipline, resilience, and an unwavering commitment to excellence. Tonight, I want you here to mark this new chapter with me.",
     invitado_mensaje: "Having you here means everything",
-    invitado_lugares: "We've reserved {pases} seat(s) in your honor",
+    invitado_lugares: "We've reserved {pases} adult spaces in your honor",
     countdown_titulo: ["T","he","b","ig","n","ight","i","s","a","lmost","h","ere","",""],
     countdown_dias: "Days",
     countdown_horas: "Hours",
@@ -1230,7 +1232,7 @@ const translations = {
     rsvp_label_asistencia: "Will you be joining us?",
     rsvp_si: "Absolutely, I'll be there",
     rsvp_no: "I won't be able to make it",
-    rsvp_label_pases: "Number of guests",
+    rsvp_label_pases: "Number of adults",
     btn_rsvp: "Confirm attendance",
     rsvp_popup_si: "Thank you for confirming! We can't wait to celebrate with you.",
     rsvp_popup_no: "We're sorry you won't be able to make it — you'll be missed.",
