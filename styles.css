@@ -3211,3 +3211,30 @@ html.js-anim .section.visible :is(.event-icon, .playlist-icon, .media-share-icon
     margin: 0;
     font-size: 23px;
 }
+
+.lang-fab {
+  position: fixed;
+  bottom: 80px;
+  left: 14px;
+  z-index: 101;
+}
+
+.lang-fab-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--rose-dark);
+  font-family: var(--sans, 'Montserrat', sans-serif);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lang-fab-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(31, 17, 21, 0.16);
+}
