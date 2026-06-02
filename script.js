@@ -1196,7 +1196,7 @@ const translations = {
     countdown_min: "Min",
     countdown_seg: "Sec",
     btn_calendar: "Add to calendar",
-    nuevo_texto: "This milestone didn't happen overnight. It took years of dedication, the support of people who believed in me, and the conviction that settling is never an option.",
+    nuevo_texto: "This milestone didn't happen overnight. It dedication, passion and the support of people who believed in me, and the conviction that settling is never an option.",
     nuevo_titulo: "Let's celebrate together!",
     itinerary_title: "Schedule",
     itinerary_item_1: "Cocktail Hour",

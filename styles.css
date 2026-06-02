@@ -1343,6 +1343,14 @@ html.js-anim .names-editorial.fade-in-element.is-visible {
     animation: itineraryIconFloat 2.4s ease-in-out infinite;
 }
 
+.itinerary-icon img {
+    width: 2.05rem;
+    height: 2.05rem;
+    object-fit: contain;
+    display: block;
+    animation: itineraryIconFloat 2.4s ease-in-out infinite;
+}
+
 .agenda-section .itinerary-item {
     opacity: 0;
     transform: translateY(14px);
