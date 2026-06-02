@@ -1,7 +1,7 @@
 :root {
-    --bg: #F8F8F6;
-    --paper: #FFFFFF;
-    --paper-strong: #FAFAFA;
+    --bg: #000000;
+    --paper: #000000;
+    --paper-strong: #000000;
     --rose: #C8D8E8;
     --rose-dark: #1A3A5C;
     --rose-deep: #0D2840;
@@ -9,8 +9,8 @@
     --gold-1: #EEF4F8;
     --gold-2: #8BAFC8;
     --gold-3: #4A7A9B;
-    --ink: #0D2840;
-    --ink-soft: #1A3A5C;
+    --ink: #FFFFFF;
+    --ink-soft: #FFFFFF;
     --line: rgba(13, 40, 64, 0.18);
     --line-soft: rgba(13, 40, 64, 0.1);
     --shadow-card: 0 18px 42px rgba(0, 0, 0, 0.38);
@@ -39,15 +39,17 @@
     }
 }
 
+html,
+body {
+    background: #000000;
+}
+
 body {
     margin: 0;
     min-height: 100vh;
     font-family: var(--font-body);
     color: var(--ink);
-    background:
-        radial-gradient(circle at 18% 12%, rgba(200, 216, 232, 0.28) 0%, rgba(200, 216, 232, 0) 42%),
-        radial-gradient(circle at 88% 4%, rgba(212, 228, 240, 0.32) 0%, rgba(212, 228, 240, 0) 36%),
-        linear-gradient(180deg, var(--bg) 0%, var(--paper-strong) 100%);
+    background: #000000;
 }
 
 .dashboard-shell {
@@ -76,7 +78,7 @@ body {
     padding: 2.1rem 2.3rem;
     border-radius: var(--radius-lg);
     border: 1px solid var(--line);
-    background: rgba(255, 255, 255, 0.94);
+    background: #000000;
     box-shadow: var(--shadow-card);
 }
 
@@ -105,8 +107,8 @@ body {
     font-size: clamp(3.1rem, 7.5vw, 5rem);
     font-weight: 400;
     line-height: 0.9;
-    color: var(--rose-deep);
-    -webkit-text-fill-color: var(--rose-deep);
+    color: #FFFFFF;
+    -webkit-text-fill-color: #FFFFFF;
 }
 
 .dashboard-subtitle {
@@ -134,7 +136,7 @@ body {
     padding: 1.05rem 1rem;
     border-radius: var(--radius-md);
     border: 1px solid var(--line-soft);
-    background: rgba(255, 255, 255, 0.94);
+    background: #000000;
     box-shadow: var(--shadow-soft);
     transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
 }
@@ -157,7 +159,7 @@ body {
 }
 
 .summary-card-highlight {
-    background: rgba(255, 255, 255, 0.94);
+    background: #000000;
     border-color: rgba(200, 216, 232, 0.28);
 }
 
@@ -175,7 +177,7 @@ body {
 }
 
 .summary-card-highlight .summary-label {
-    color: var(--rose-deep);
+    color: #FFFFFF;
 }
 
 .summary-value {
@@ -184,18 +186,18 @@ body {
     font-size: clamp(1.75rem, 2.6vw, 2.45rem);
     font-weight: 600;
     line-height: 0.95;
-    color: var(--rose-deep);
+    color: #FFFFFF;
 }
 
 .summary-card-highlight .summary-value {
-    color: var(--rose-deep);
+    color: #FFFFFF;
 }
 
 .dashboard-table-panel {
     padding: 1.28rem;
     border-radius: var(--radius-lg);
     border: 1px solid var(--line);
-    background: rgba(255, 255, 255, 0.94);
+    background: #000000;
     box-shadow: var(--shadow-card);
 }
 
@@ -213,7 +215,7 @@ body {
     font-size: clamp(1.55rem, 3vw, 2rem);
     font-weight: 500;
     letter-spacing: 0.03em;
-    color: var(--rose-deep);
+    color: #FFFFFF;
 }
 
 .table-panel-header p {
@@ -260,7 +262,7 @@ body {
     padding: 0.66rem 0.82rem;
     border-radius: 12px;
     border: 1px solid rgba(200, 216, 232, 0.24);
-    background: rgba(255, 255, 255, 0.96);
+    background: #000000;
     color: var(--ink);
     font-family: var(--font-body);
     font-size: 0.92rem;
@@ -268,7 +270,7 @@ body {
 }
 
 .table-search-input::placeholder {
-    color: rgba(26, 58, 92, 0.62);
+    color: rgba(255, 255, 255, 0.68);
 }
 
 .table-search-input:focus {
@@ -320,21 +322,21 @@ body {
 
 .table-clear-btn {
     padding: 0.56rem 0.92rem;
-    background: rgba(255, 255, 255, 0.96);
-    color: var(--rose-deep);
+    background: #000000;
+    color: #FFFFFF;
 }
 
 .table-export-btn {
     padding: 0.56rem 1rem;
     border-color: rgba(200, 216, 232, 0.68);
-    background: rgba(255, 255, 255, 0.96);
-    color: var(--rose-deep);
+    background: #000000;
+    color: #FFFFFF;
 }
 
 .filter-chip {
     padding: 0.45rem 0.74rem;
-    background: rgba(255, 255, 255, 0.96);
-    color: var(--rose-deep);
+    background: #000000;
+    color: #FFFFFF;
 }
 
 .table-clear-btn:hover,
@@ -356,8 +358,8 @@ body {
 
 .filter-chip.is-active {
     border-color: rgba(200, 216, 232, 0.72);
-    background: rgba(200, 216, 232, 0.34);
-    color: var(--rose-deep);
+    background: #1A3A5C;
+    color: #FFFFFF;
 }
 
 .table-export-btn:disabled {
@@ -371,7 +373,7 @@ body {
     overflow-x: auto;
     border-radius: var(--radius-md);
     border: 1px solid var(--line-soft);
-    background: rgba(255, 255, 255, 0.96);
+    background: #000000;
     scrollbar-color: rgba(139, 175, 200, 0.5) rgba(255, 255, 255, 0.08);
 }
 
@@ -395,9 +397,9 @@ body {
     font-weight: 500;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--rose-deep);
+    color: #FFFFFF;
     border-bottom: 1px solid rgba(200, 216, 232, 0.2);
-    background: rgba(200, 216, 232, 0.34);
+    background: #1A3A5C;
 }
 
 .confirmations-table tbody tr {
@@ -405,18 +407,18 @@ body {
 }
 
 .confirmations-table tbody tr:nth-child(even) {
-    background: rgba(200, 216, 232, 0.12);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .confirmations-table tbody tr:hover {
-    background: rgba(200, 216, 232, 0.22);
+    background: rgba(255, 255, 255, 0.14);
 }
 
 .confirmations-table tbody td {
     padding: 0.95rem 0.96rem;
     border-bottom: 1px solid rgba(200, 216, 232, 0.1);
     font-size: 0.92rem;
-    color: var(--rose-deep);
+    color: #FFFFFF;
     vertical-align: middle;
 }
 
@@ -470,7 +472,7 @@ body {
 }
 
 .id-cell {
-    color: var(--rose-deep);
+    color: #FFFFFF;
     font-size: 0.78rem;
     font-family: var(--font-subtitle);
     letter-spacing: 0.03em;
@@ -480,7 +482,7 @@ body {
 .confirmation-card-name {
     font-size: 1rem;
     font-weight: 500;
-    color: var(--rose-deep);
+    color: #FFFFFF;
 }
 
 .date-main,
@@ -490,7 +492,7 @@ body {
 }
 
 .date-main {
-    color: var(--rose-deep);
+    color: #FFFFFF;
     font-size: 0.84rem;
     font-weight: 500;
 }
@@ -518,19 +520,19 @@ body {
 .status-badge--si {
     background: rgba(200, 216, 232, 0.16);
     border-color: rgba(200, 216, 232, 0.38);
-    color: var(--rose-deep);
+    color: #FFFFFF;
 }
 
 .status-badge--no {
     background: rgba(74, 122, 155, 0.18);
     border-color: rgba(74, 122, 155, 0.42);
-    color: var(--rose-deep);
+    color: #FFFFFF;
 }
 
 .status-badge--pendiente {
-    background: rgba(200, 216, 232, 0.16);
+    background: rgba(255, 255, 255, 0.08);
     border-color: rgba(200, 216, 232, 0.24);
-    color: var(--rose-deep);
+    color: #FFFFFF;
 }
 
 .empty-state,
@@ -544,13 +546,13 @@ body {
 .mobile-empty-state {
     border-radius: 12px;
     border: 1px dashed rgba(200, 216, 232, 0.26);
-    background: rgba(255, 255, 255, 0.96);
+    background: #000000;
 }
 
 .confirmation-card {
     border-radius: var(--radius-sm);
     border: 1px solid var(--line-soft);
-    background: rgba(255, 255, 255, 0.96);
+    background: #000000;
     box-shadow: var(--shadow-soft);
     padding: 0.95rem;
 }
@@ -560,7 +562,7 @@ body {
 }
 
 .confirmation-card-id-inline {
-    color: var(--rose-deep);
+    color: #FFFFFF;
     font-family: var(--font-subtitle);
     font-size: 0.74rem;
     letter-spacing: 0.06em;
@@ -568,7 +570,7 @@ body {
 }
 
 .confirmation-card-name-main {
-    color: var(--rose-deep);
+    color: #FFFFFF;
 }
 
 .confirmation-card-status {
@@ -596,8 +598,8 @@ body {
 
 .dashboard-shell,
 .dashboard-shell * {
-    color: var(--rose-deep) !important;
-    -webkit-text-fill-color: var(--rose-deep) !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
 }
 
 .dashboard-header,
@@ -610,7 +612,7 @@ body {
 .table-clear-btn,
 .table-export-btn,
 .filter-chip {
-    background-color: rgba(255, 255, 255, 0.96) !important;
+    background-color: #000000 !important;
 }
 
 @media (max-width: 1120px) {
