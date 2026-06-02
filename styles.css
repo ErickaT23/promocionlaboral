@@ -1344,8 +1344,8 @@ html.js-anim .names-editorial.fade-in-element.is-visible {
 }
 
 .itinerary-icon img {
-    width: 2.05rem;
-    height: 2.05rem;
+    width: 1em;
+    height: 1em;
     object-fit: contain;
     display: block;
     animation: itineraryIconFloat 2.4s ease-in-out infinite;
