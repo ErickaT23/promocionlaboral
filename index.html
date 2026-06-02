@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Two Design">
     <title>Anthony Jr. Lopez</title>
-  <meta name="description" content="Celebrar los éxitos y la vida.">
+  <meta name="description" content="Celebremos los éxitos y la vida.">
 
   <!-- Open Graph (WhatsApp, Facebook) -->
   <meta property="og:title" content="Anthony Jr. Lopez">
-  <meta property="og:description" content="Celebrar los éxitos y la vida.">
+  <meta property="og:description" content="Celebremos los éxitos y la vida.">
   <meta property="og:image" content="https://images.pexels.com/photos/37906697/pexels-photo-37906697.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
@@ -20,7 +20,7 @@
   <!-- Twitter/X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Anthony Jr. Lopez">
-  <meta name="twitter:description" content="Celebrar los éxitos y la vida.">
+  <meta name="twitter:description" content="Celebremos los éxitos y la vida.">
   <meta name="twitter:image" content="https://images.pexels.com/photos/37906697/pexels-photo-37906697.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,12 +35,12 @@
     <section class="portada" id="portada">
         <div class="portada-fondo"></div>
         <div class="portada-contenido">
-            <p class="portada-subtitulo">Celebremos juntos a</p>
+            <p class="portada-subtitulo" data-i18n="portada_kicker">Celebremos juntos a</p>
             <h1 class="portada-nombre-principal">Anthony Jr.</h1>
             <button type="button" class="portada-sobre-btn" id="portada-envelope-trigger" aria-label="Abrir invitación desde el sobre">
                 <img src="images/ENVELOPE-TONY.svg" alt="Sobre de invitación" class="portada-sobre-img">
             </button>
-            <button class="portada-boton" id="btn-abrir">Abrir invitación</button>
+            <button class="portada-boton" id="btn-abrir" data-i18n="portada_boton">Abrir invitación</button>
         </div>
     </section>
 
@@ -53,7 +53,7 @@
             <div class="hero-invitado-overlay"></div>
             <div class="hero-invitado-contenido">
                 <div class="scroll-hint" id="scroll-hint">
-                    <span class="scroll-hint-text">Desliza hacia abajo</span>
+                    <span class="scroll-hint-text" data-i18n="scroll_hint">Desliza hacia abajo</span>
                 </div>
             </div>
         </section>
@@ -68,13 +68,13 @@
                 </div>
 
                 <div class="date-vertical">
-                    <span>27</span>
                     <span>06</span>
+                    <span>27</span>
                     <span>26</span>
                 </div>
             </div>
 
-            <p class="names-text">Hay logros que se construyen en silencio, con dedicación, constancia y pasión. Hoy quiero que seas parte de este momento que marca un nuevo capítulo en mi carrera.</p>
+            <p class="names-text" data-i18n="names_text">Hay logros que se construyen en silencio, con dedicación, constancia y pasión. Hoy quiero que seas parte de este momento que marca un nuevo capítulo en mi carrera.</p>
         </section>
 
         <!-- Sección Invitado -->
@@ -83,9 +83,9 @@
             <div class="events-overlay"></div>
             <div class="invitado-tarjeta event-card">
                 <div class="invitado-contenido">
-                    <p class="invitado-mensaje">Tu presencia hace este logro aún más especial</p>
+                    <p class="invitado-mensaje" data-i18n="invitado_mensaje">Tu presencia hace este logro aún más especial</p>
                     <p class="invitado-nombre" id="nombre-invitado">Nombre del Invitado</p>
-                    <p class="invitado-lugares">Hemos reservado para ti <span id="numero-lugares">2</span><span id="texto-lugares"> invitados</span></p>
+                    <p class="invitado-lugares" data-i18n-template="invitado_lugares">Hemos reservado para ti <span id="numero-lugares">2</span><span id="texto-lugares"> lugares</span></p>
                 </div>
             </div>
         </section>
@@ -127,25 +127,25 @@
                 <div class="countdown" id="countdown-timer">
                     <div class="countdown-item">
                         <span class="countdown-number" id="days">00</span>
-                        <span class="countdown-label">Días</span>
+                        <span class="countdown-label" data-i18n="countdown_dias">Días</span>
                     </div>
                     <div class="countdown-separator">·</div>
                     <div class="countdown-item">
                         <span class="countdown-number" id="hours">00</span>
-                        <span class="countdown-label">Horas</span>
+                        <span class="countdown-label" data-i18n="countdown_horas">Horas</span>
                     </div>
                     <div class="countdown-separator">·</div>
                     <div class="countdown-item">
                         <span class="countdown-number" id="minutes">00</span>
-                        <span class="countdown-label">Min</span>
+                        <span class="countdown-label" data-i18n="countdown_min">Min</span>
                     </div>
                     <div class="countdown-separator">·</div>
                     <div class="countdown-item">
                         <span class="countdown-number" id="seconds">00</span>
-                        <span class="countdown-label">Seg</span>
+                        <span class="countdown-label" data-i18n="countdown_seg">Seg</span>
                     </div>
                 </div>
-                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Celebremos%20a%20Anthony%20Jr.%20Lopez&amp;dates=20260627T190000/20260627T230000&amp;ctz=America/New_York&amp;details=Celebremos%20juntos&amp;location=27-05%2039th%20Ave%2C%20Long%20Island%20City%2C%20NY%2011101%2C%20United%20States" target="_blank" class="btn-calendar">
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Celebremos%20a%20Anthony%20Jr.%20Lopez&amp;dates=20260627T190000/20260627T230000&amp;ctz=America/New_York&amp;details=Celebremos%20juntos&amp;location=27-05%2039th%20Ave%2C%20Long%20Island%20City%2C%20NY%2011101%2C%20United%20States" target="_blank" class="btn-calendar" data-calendar-link="true" data-i18n="btn_calendar">
                     Agregar al calendario
                 </a>
             </div>
@@ -157,8 +157,8 @@
 
             <div class="bendiciones-tarjeta">
                 <div class="bendiciones-contenido">
-                    <p class="bendiciones-texto">Este logro no sería posible sin la dedicación de años, el apoyo incondicional de quienes creyeron en mí, y la determinación de nunca conformarse con menos de lo mejor.</p>
-                    <h2 class="bendiciones-nombre">¡Celebremos juntos!</h2>
+                    <p class="bendiciones-texto" data-i18n="nuevo_texto">Este logro no sería posible sin la dedicación de años, el apoyo incondicional de quienes creyeron en mí, y la determinación de nunca conformarse con menos de lo mejor.</p>
+                    <h2 class="bendiciones-nombre" data-i18n="nuevo_titulo">¡Celebremos juntos!</h2>
                 </div>
             </div>
         </section>
@@ -172,9 +172,16 @@
 
                 <div class="agenda-itinerary">
                     <article class="itinerary-item">
-                        <div class="itinerary-icon" aria-hidden="true"><i class="fa-solid fa-door-open"></i></div>
-                        <p class="itinerary-name">Inicio de recepción</p>
-                        <p class="itinerary-time">7:00 PM</p>
+                        <div class="itinerary-icon" aria-hidden="true"><i class="fa-solid fa-martini-glass-citrus"></i></div>
+                        <p class="itinerary-name">Cocktail Hour</p>
+                        <p class="itinerary-time">6:00 PM</p>
+                        <p class="itinerary-divider" aria-hidden="true">|</p>
+                    </article>
+
+                    <article class="itinerary-item">
+                        <div class="itinerary-icon" aria-hidden="true"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <p class="itinerary-name">Protocolo y gran anuncio</p>
+                        <p class="itinerary-time">7:15 PM</p>
                         <p class="itinerary-divider" aria-hidden="true">|</p>
                     </article>
 
@@ -188,14 +195,14 @@
                     <article class="itinerary-item">
                         <div class="itinerary-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></div>
                         <p class="itinerary-name">Palabras emotivas</p>
-                        <p class="itinerary-time">9:00 PM</p>
+                        <p class="itinerary-time">8:15 PM</p>
                         <p class="itinerary-divider" aria-hidden="true">|</p>
                     </article>
 
                     <article class="itinerary-item">
                         <div class="itinerary-icon" aria-hidden="true"><i class="fa-solid fa-champagne-glasses"></i></div>
                         <p class="itinerary-name">Despedida</p>
-                        <p class="itinerary-time">10:00 PM</p>
+                        <p class="itinerary-time">11:30 PM</p>
                     </article>
                 </div>
             </div>
@@ -214,36 +221,37 @@
                     <div class="event-icon zoom-in-element">
                         <img src="images/VENUE.jpg" alt="Lugar de recepción" class="event-photo-icon">
                     </div>
-                    <h3 class="event-titulo">
+                    <h3 class="event-titulo" data-i18n="recepcion_titulo">
                         <span class="event-inicial">R</span><span class="event-resto">ecepción</span>
                     </h3>
                     <p class="event-time">7:00 PM</p>
                     <p class="event-lugar">Vista Penthouse Ballroom &amp; Catering</p>
                     <p class="event-direccion">27-05 39th Ave, Long Island City, NY 11101, United States</p>
-                    <a href="https://maps.apple/p/_pXDYRpviixPmz" target="_blank" class="btn-location">Ver ubicación</a>
+                    <a href="https://maps.apple/p/_pXDYRpviixPmz" target="_blank" class="btn-location" data-i18n="btn_location">Ver ubicación</a>
                 </div>
             </div>
         </section>
 
-        <!-- Código de Vestimenta -->
+        <!-- Código de vestimenta -->
         <section class="section dresscode-section" id="dresscode">
             <div class="dresscode-fondo"></div>
             <div class="events-overlay"></div>
             <div class="section-inner dresscode-inner">
                 <div class="dresscode-gifts-block" id="dresscode-block">
-                    <h2 class="dresscode-title">Código de Vestimenta</h2>
+                    <img src="images/DRESSCODE.png" alt="Icono código de vestimenta" class="dresscode-icon">
+                    <h2 class="dresscode-title" data-i18n="dresscode_title">Código de vestimenta</h2>
 
-                    <p class="dresscode-text">Esta noche merece tu mejor versión. Te invitamos a vestir formal en tono negro para celebrar juntos este gran logro.</p>
+                    <p class="dresscode-text" data-i18n="dresscode_text">Esta noche merece tu mejor versión. Te invitamos a vestir formal en tono negro para celebrar juntos este gran logro.</p>
                 </div>
 
                 <div class="dresscode-gifts-divider" aria-hidden="true"></div>
 
                 <div class="dresscode-gifts-block" id="gifts">
-                    <h2 class="gifts-title">
+                    <h2 class="gifts-title" data-i18n="gifts_title">
                         <span class="gifts-title-inicial">L</span><span class="gifts-title-resto">luvia de </span><span class="gifts-title-inicial">S</span><span class="gifts-title-resto">obres</span>
                     </h2>
 
-                    <p class="gifts-text">Tu presencia es mi mejor regalo. Si deseas tener un detalle conmigo, contaremos con lluvia de sobres.</p>
+                    <p class="gifts-text" data-i18n="gifts_text">Tu presencia es mi mejor regalo. Si deseas tener un detalle conmigo, contaremos con lluvia de sobres.</p>
                 </div>
             </div>
         </section>
@@ -256,21 +264,21 @@
             <div class="trayectoria-fondo"></div>
             <div class="events-overlay"></div>
             <div class="section-inner trayectoria-inner">
-                <h2 class="trayectoria-title">Mi Trayectoria</h2>
+                <h2 class="trayectoria-title" data-i18n="trayectoria_title">Mi Trayectoria</h2>
                 <div class="trayectoria-grid">
                     <figure class="trayectoria-item">
                         <button type="button" class="trayectoria-open" data-trayectoria-index="0" aria-label="Abrir foto 1 de Mi Trayectoria">
-                            <img src="images/T1.jpeg" alt="Trayectoria laboral 1" loading="lazy">
+                            <img src="images/T1.jpeg" alt="Trayectoria 1" loading="lazy">
                         </button>
                     </figure>
                     <figure class="trayectoria-item">
                         <button type="button" class="trayectoria-open" data-trayectoria-index="1" aria-label="Abrir foto 2 de Mi Trayectoria">
-                            <img src="images/T2.jpeg" alt="Trayectoria laboral 2" loading="lazy">
+                            <img src="images/T2.jpeg" alt="Trayectoria 2" loading="lazy">
                         </button>
                     </figure>
                     <figure class="trayectoria-item">
                         <button type="button" class="trayectoria-open" data-trayectoria-index="2" aria-label="Abrir foto 3 de Mi Trayectoria">
-                            <img src="images/T3.jpeg" alt="Trayectoria laboral 3" loading="lazy">
+                            <img src="images/T3.jpeg" alt="Trayectoria 3" loading="lazy">
                         </button>
                     </figure>
                 </div>
@@ -289,13 +297,13 @@
                     </div>
                     -->
 
-                    <h2 class="playlist-title">
+                    <h2 class="playlist-title" data-i18n="playlist_title">
                         <span class="playlist-title-inicial">P</span><span class="playlist-title-resto">laylist</span>
                     </h2>
 
-                    <p class="playlist-text">Ayúdame a crear la playlist perfecta para esta noche. Agrega esa canción que no puede faltar.</p>
+                    <p class="playlist-text" data-i18n="playlist_text">Ayúdame a crear la playlist perfecta para esta noche. Agrega esa canción que no puede faltar.</p>
 
-                    <a href="https://www.youtube.com/playlist?list=PL1BxR7BEmiekKO4zxOLPKGQoDMx4rmDVB&amp;jct=6USZYM34-pUl3nx-8GFhTg" target="_blank" class="btn-playlist">Agregar canción</a>
+                    <a href="#" target="_blank" class="btn-playlist" data-i18n="btn_playlist">Agregar canción</a>
                 </article>
             </div>
         </section>
@@ -315,31 +323,31 @@
                 </div>
                 -->
 
-                <h2 class="wishes-title">
+                <h2 class="wishes-title" data-i18n="wishes_title">
                     <span class="wishes-title-inicial">B</span><span class="wishes-title-resto">uenos</span>
                     <span class="wishes-title-space"></span>
                     <span class="wishes-title-inicial">D</span><span class="wishes-title-resto">eseos</span>
                 </h2>
 
-                <p class="wishes-text">Déjame un mensaje especial para guardar este recuerdo por siempre en mi corazón.</p>
+                <p class="wishes-text" data-i18n="wishes_text">Déjame un mensaje especial para guardar este recuerdo por siempre en mi corazón.</p>
 
                 <div class="wishes-actions">
                     <div class="wishes-buttons">
-                        <button type="button" class="btn-wish-toggle" onclick="toggleWishForm()">Déjanos tu deseo</button>
-                        <button type="button" class="btn-wish-toggle" onclick="toggleWishes()">Leer buenos deseos</button>
+                        <button type="button" class="btn-wish-toggle" onclick="toggleWishForm()" data-i18n="btn_wish_open">Déjanos tu deseo</button>
+                        <button type="button" class="btn-wish-toggle" onclick="toggleWishes()" data-i18n="btn_wish_read">Leer buenos deseos</button>
                     </div>
 
                     <div id="wish-form-panel" class="wish-panel hidden">
                         <form id="wish-form" class="wish-form" onsubmit="return submitWish(event)">
                             <div class="wish-field">
-                                <label for="wish-name">Nombre</label>
-                                <input type="text" id="wish-name" name="name" placeholder="Tu nombre" required>
+                                <label for="wish-name" data-i18n="wish_label_nombre">Nombre</label>
+                                <input type="text" id="wish-name" name="name" placeholder="Tu nombre" data-i18n-placeholder="wish_placeholder_nombre" required>
                             </div>
                             <div class="wish-field">
-                                <label for="wish-message">Deseo</label>
-                                <textarea id="wish-message" name="message" placeholder="Escribe tu mensaje" rows="5" required></textarea>
+                                <label for="wish-message" data-i18n="wish_label_deseo">Deseo</label>
+                                <textarea id="wish-message" name="message" placeholder="Escribe tu mensaje" data-i18n-placeholder="wish_placeholder_deseo" rows="5" required></textarea>
                             </div>
-                            <button type="submit" class="btn-wish-submit">Enviar deseo</button>
+                            <button type="submit" class="btn-wish-submit" data-i18n="btn_wish_submit">Enviar deseo</button>
                             <p id="wish-status" class="wish-status" aria-live="polite"></p>
                         </form>
                     </div>
@@ -363,7 +371,7 @@
                     </div>
                     -->
 
-                    <h2 class="rsvp-title">
+                    <h2 class="rsvp-title" data-i18n="rsvp_title">
                         <span class="rsvp-title-palabra">
                             <span class="rsvp-title-inicial">C</span><span class="rsvp-title-resto">onfirmar</span>
                         </span>
@@ -373,7 +381,7 @@
                         </span>
                     </h2>
 
-                    <p class="rsvp-intro">Tu presencia hará este día aún más especial. Por favor confirma tu asistencia.</p>
+                    <p class="rsvp-intro" data-i18n="rsvp_intro">Tu presencia hará este día aún más especial. Por favor confirma tu asistencia.</p>
 
                     <form id="rsvp-form" class="rsvp-form" novalidate>
                         <div class="form-group">
@@ -382,21 +390,21 @@
                         </div>
 
                         <div class="form-group">
-                            <p class="rsvp-label">Asistirás</p>
+                            <p class="rsvp-label" data-i18n="rsvp_label_asistencia">Asistirás</p>
                             <div class="rsvp-response-group">
                                 <label class="rsvp-radio-option" for="rsvp-response-yes">
                                     <input type="radio" id="rsvp-response-yes" name="attendance" value="yes">
-                                    <span>Sí, con mucho gusto</span>
+                                    <span data-i18n="rsvp_si">Sí, con mucho gusto</span>
                                 </label>
                                 <label class="rsvp-radio-option" for="rsvp-response-no">
                                     <input type="radio" id="rsvp-response-no" name="attendance" value="no">
-                                    <span>No, lamentablemente no podré</span>
+                                    <span data-i18n="rsvp_no">No, lamentablemente no podré</span>
                                 </label>
                             </div>
                         </div>
 
                         <div class="form-group" id="guest-count-wrapper" style="display: none;">
-                            <label for="guest-count">Número de invitados</label>
+                            <label for="guest-count" data-i18n="rsvp_label_pases">Número de invitados</label>
                             <select id="guest-count" name="guests">
                                 <option value="1">1 invitado</option>
                                 <option value="2">2 invitados</option>
@@ -407,7 +415,7 @@
                             </select>
                         </div>
 
-                        <button type="submit" class="btn-rsvp" id="rsvp-submit">Confirmar asistencia</button>
+                        <button type="submit" class="btn-rsvp" id="rsvp-submit" data-i18n="btn_rsvp">Confirmar asistencia</button>
                     </form>
 
                     <div id="rsvp-success" class="rsvp-success rsvp-final-container" style="display: none;">
@@ -426,7 +434,7 @@
             <div class="events-overlay"></div>
             <div class="section-inner final-cierre-inner">
                 <article class="frase-card">
-                    <p class="frase-texto">La excelencia no se anuncia, se demuestra - y ahora viene la mejor parte: ¡celebrarlo juntos!.</p>
+                    <p class="frase-texto" data-i18n="frase_final">La excelencia no se anuncia, se demuestra - y ahora viene la mejor parte: ¡celebrarlo juntos!</p>
                 </article>
             </div>
         </section>
@@ -440,7 +448,7 @@
 
         <footer id="footer" class="footer">
             <div id="social-icons">
-                <a href="https://wa.me/50236011737" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
+                <a href="https://wa.me/50236011737" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                     <i class="fab fa-whatsapp"></i>
                 </a>
                 <a href="https://www.facebook.com/thetwodesign" target="_blank" rel="noopener noreferrer" aria-label="Facebook">

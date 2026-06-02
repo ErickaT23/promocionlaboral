@@ -1507,11 +1507,10 @@ function formatDate(timestamp) {
   if (!timestamp) return "";
   const date = new Date(timestamp);
   if (Number.isNaN(date.getTime())) return "";
-  return date.toLocaleDateString("es-GT", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric"
-  });
+  const month = date.toLocaleDateString("es-GT", { month: "long" });
+  const formattedMonth = month.charAt(0).toUpperCase() + month.slice(1);
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${formattedMonth} ${day}, ${date.getFullYear()}`;
 }
 
 function renderWishes(data) {

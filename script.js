@@ -87,7 +87,7 @@ function createSiteConfig(remoteConfig) {
     return {
         seo: {
             titulo: 'Anthony Jr. Lopez',
-            descripcion: 'Celebrar los éxitos y la vida de Anthony Jr. Lopez - 27 de Junio 2026',
+            descripcion: 'Celebremos los éxitos y la vida de Anthony Jr. Lopez - 27 de junio de 2026',
             autor: 'Two Design',
             ...externalConfig.seo,
             ...normalizedRemoteConfig.seo
@@ -281,13 +281,7 @@ function applyFooterConfig() {
 // CONFIGURACIÓN - Editar aquí los invitados
 // ============================================
 const GuestConfig = {
-    invitados: {
-        "1": { nombre: "Carlos Mendoza", pases: 2 },
-        "2": { nombre: "Sofia Ramirez", pases: 3 },
-        "3": { nombre: "Daniel Ortega", pases: 1 },
-        "4": { nombre: "Valeria Torres", pases: 2 },
-        "5": { nombre: "Javier Castillo", pases: 4 }
-    },
+    invitados: {},
     invitadoDefault: { nombre: "Invitado Especial", pases: 2 },
     paramId: 'id'
 };
@@ -377,7 +371,7 @@ const InvitadoApp = {
 
         const textoEl = document.createElement('span');
         textoEl.id = 'texto-lugares';
-        textoEl.textContent = Number(pases) === 1 ? ' lugar' : ' invitados';
+        textoEl.textContent = Number(pases) === 1 ? ' lugar' : ' lugares';
 
         lugaresEl.replaceChildren(
             document.createTextNode(parts[0] || ''),
@@ -659,61 +653,6 @@ function getEventDateFromConfig() {
     return new Date('2026-06-27T19:00:00').getTime();
 }
 
-function initAutoGallery() {
-    const section = document.getElementById('gallery-auto');
-    if (!section) return;
-
-    const slides = Array.from(section.querySelectorAll('.gallery-auto-slide'));
-    if (slides.length === 0) return;
-
-    let currentIndex = Math.max(0, slides.findIndex(slide => slide.classList.contains('is-active')));
-    if (currentIndex < 0 || currentIndex >= slides.length) currentIndex = 0;
-
-    const intervalMs = 5200;
-    let timerId = null;
-
-    function render(index) {
-        slides.forEach((slide, slideIndex) => {
-            slide.classList.toggle('is-active', slideIndex === index);
-        });
-    }
-
-    function goTo(index) {
-        currentIndex = (index + slides.length) % slides.length;
-        render(currentIndex);
-    }
-
-    function next() {
-        goTo(currentIndex + 1);
-    }
-
-    function startAutoplay() {
-        stopAutoplay();
-        timerId = window.setInterval(next, intervalMs);
-    }
-
-    function stopAutoplay() {
-        if (timerId) {
-            window.clearInterval(timerId);
-            timerId = null;
-        }
-    }
-
-    section.addEventListener('mouseenter', stopAutoplay);
-    section.addEventListener('mouseleave', startAutoplay);
-
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            stopAutoplay();
-        } else {
-            startAutoplay();
-        }
-    });
-
-    render(currentIndex);
-    startAutoplay();
-}
-
 function initSectionSeparadorRotativo() {
     const section = document.querySelector('.section-separador-rotativo');
     if (!section) return;
@@ -991,7 +930,6 @@ function initRSVP() {
         const guestNameInput = document.getElementById('rsvp-name');
         const guestName = String((guestNameInput && guestNameInput.value) || (guestData.nombre || '') || 'Invitado').trim();
         const selectedPasses = Math.max(1, Number(passesValue) || 1);
-
         if (respuesta === 'no') {
             return 'Hola! Soy ' + guestName + ', lamentablemente no podré asistir a la celebración de Anthony Jr. Lopez el 27 de junio.';
         }

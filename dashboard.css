@@ -1,18 +1,18 @@
 :root {
-    --bg: #0f1012;
-    --paper: rgba(255, 255, 255, 0.08);
-    --paper-strong: rgba(255, 255, 255, 0.12);
+    --bg: #F8F8F6;
+    --paper: #FFFFFF;
+    --paper-strong: #FAFAFA;
     --rose: #C8D8E8;
     --rose-dark: #1A3A5C;
-    --rose-deep: #D4E4F0;
+    --rose-deep: #0D2840;
     --beige: #D4E4F0;
     --gold-1: #EEF4F8;
     --gold-2: #8BAFC8;
     --gold-3: #4A7A9B;
-    --ink: #F8F8F6;
-    --ink-soft: rgba(248, 248, 246, 0.68);
-    --line: rgba(200, 216, 232, 0.22);
-    --line-soft: rgba(200, 216, 232, 0.12);
+    --ink: #0D0D0D;
+    --ink-soft: #4A5568;
+    --line: rgba(13, 40, 64, 0.18);
+    --line-soft: rgba(13, 40, 64, 0.1);
     --shadow-card: 0 18px 42px rgba(0, 0, 0, 0.38);
     --shadow-soft: 0 10px 26px rgba(0, 0, 0, 0.28);
     --radius-lg: 24px;
@@ -45,9 +45,9 @@ body {
     font-family: var(--font-body);
     color: var(--ink);
     background:
-        radial-gradient(circle at 18% 12%, rgba(200, 216, 232, 0.14) 0%, rgba(200, 216, 232, 0) 42%),
-        radial-gradient(circle at 88% 4%, rgba(74, 122, 155, 0.26) 0%, rgba(74, 122, 155, 0) 36%),
-        linear-gradient(180deg, #141519 0%, #0d0e10 100%);
+        radial-gradient(circle at 18% 12%, rgba(200, 216, 232, 0.28) 0%, rgba(200, 216, 232, 0) 42%),
+        radial-gradient(circle at 88% 4%, rgba(212, 228, 240, 0.32) 0%, rgba(212, 228, 240, 0) 36%),
+        linear-gradient(180deg, var(--bg) 0%, var(--paper-strong) 100%);
 }
 
 .dashboard-shell {

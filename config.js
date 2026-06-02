@@ -17,7 +17,7 @@ const config = {
 
     seo: {
         titulo: "Anthony Jr. Lopez",
-        descripcion: "Celebrar los éxitos y la vida de Anthony Jr. Lopez - 27 de Junio 2026",
+        descripcion: "Celebremos los éxitos y la vida de Anthony Jr. Lopez - 27 de junio de 2026",
         autor: "Two Design"
     },
 

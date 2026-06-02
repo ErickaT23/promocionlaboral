@@ -1,5 +1,5 @@
 :root {
-    --bg: #F8F8F6;
+    --bg: #000000;
     --ink: #0D0D0D;
     --rose: #C8D8E8;
     --light: #D4E4F0;
@@ -11,7 +11,7 @@
     --line: rgba(13, 40, 64, 0.18);
     --card: rgba(255, 255, 255, 0.75);
     --white: #ffffff;
-    --title-rose-gradient: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #4A7A9B 50%, #8BAFC8 75%, #C8D8E8 100%);
+    --title-rose-gradient: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #1A3A5C 50%, #8BAFC8 75%, #C8D8E8 100%);
     --cursive: "Cormorant Garant", serif;
     --title: "Montserrat", sans-serif;
     --text: "Cormorant Garant", serif;
@@ -90,11 +90,8 @@ body {
 }
 
 body {
-    background-color: #0f1012;
-    background-image:
-        radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 42%),
-        radial-gradient(circle at 82% 74%, rgba(200, 216, 232, 0.08) 0%, rgba(200, 216, 232, 0) 48%),
-        linear-gradient(180deg, #141519 0%, #0d0e10 100%);
+    background-color: var(--bg);
+    background-image: none;
     color: var(--ink);
     font-family: var(--text);
 }
@@ -123,7 +120,7 @@ a {
 }
 
 .gold-gradient {
-    background: linear-gradient(120deg, #D4E4F0 0%, #8BAFC8 35%, #4A7A9B 60%, #8BAFC8 100%);
+    background: linear-gradient(120deg, #D4E4F0 0%, #8BAFC8 35%, #1A3A5C 60%, #8BAFC8 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     color: transparent;
@@ -131,7 +128,7 @@ a {
 }
 
 .rose-gradient {
-    background: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #4A7A9B 50%, #8BAFC8 75%, #C8D8E8 100%);
+    background: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #1A3A5C 50%, #8BAFC8 75%, #C8D8E8 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     color: transparent;
@@ -209,13 +206,23 @@ a {
     font-family: var(--cursive);
     font-weight: 500;
     font-size: clamp(3.2rem, 14vw, 5.4rem);
-    background: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #4A7A9B 50%, #8BAFC8 75%, #C8D8E8 100%);
+    background: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #1A3A5C 50%, #8BAFC8 75%, #C8D8E8 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     color: transparent;
     animation: foilShine 10s cubic-bezier(.4, 0, .2, 1) infinite alternate;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
     padding: 5px;
+}
+
+.portada-nombre-secundario {
+    margin: -10px 0 16px;
+    font-family: var(--title);
+    font-size: clamp(1.15rem, 5vw, 1.8rem);
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--white);
+    text-shadow: 0 3px 14px rgba(13, 13, 13, 0.34);
 }
 
 .portada-sobre-btn {
@@ -260,7 +267,7 @@ a {
 .media-share-inicial,
 .wishes-title-inicial,
 .rsvp-title-inicial {
-    background: linear-gradient(120deg, #D4E4F0 0%, #8BAFC8 35%, #4A7A9B 60%, #8BAFC8 100%);
+    background: linear-gradient(120deg, #D4E4F0 0%, #8BAFC8 35%, #1A3A5C 60%, #8BAFC8 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     color: transparent;
@@ -396,8 +403,7 @@ a {
 
 /* Hero */
 .hero-invitado {
-    position: sticky;
-    top: 0;
+    position: relative;
     min-height: 100vh;
     min-height: 100dvh;
     display: flex;
@@ -478,7 +484,7 @@ a {
 .rsvp-title,
 .album-title,
 .frase-texto {
-    background: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #4A7A9B 50%, #8BAFC8 75%, #C8D8E8 100%);
+    background: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #1A3A5C 50%, #8BAFC8 75%, #C8D8E8 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     color: transparent;
@@ -541,7 +547,7 @@ html.js-anim .names-editorial.fade-in-element.is-visible {
     align-items: flex-end;
     justify-content: center;
     font-family: var(--cursive);
-    background: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #4A7A9B 50%, #8BAFC8 75%, #C8D8E8 100%);
+    background: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #1A3A5C 50%, #8BAFC8 75%, #C8D8E8 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     color: transparent;
@@ -560,7 +566,7 @@ html.js-anim .names-editorial.fade-in-element.is-visible {
     font-size: 50px;
     font-family: var(--text);
     font-style: italic;
-    background: linear-gradient(120deg, #D4E4F0 0%, #8BAFC8 35%, #4A7A9B 60%, #8BAFC8 100%);
+    background: linear-gradient(120deg, #D4E4F0 0%, #8BAFC8 35%, #1A3A5C 60%, #8BAFC8 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     color: transparent;
@@ -638,7 +644,7 @@ html.js-anim .names-editorial.fade-in-element.is-visible {
     align-items: center;
     justify-content: center;
     font-family: var(--cursive);
-    background: linear-gradient(120deg, #D4E4F0 0%, #8BAFC8 35%, #4A7A9B 60%, #8BAFC8 100%);
+    background: linear-gradient(120deg, #D4E4F0 0%, #8BAFC8 35%, #1A3A5C 60%, #8BAFC8 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     color: transparent;
@@ -936,16 +942,32 @@ html.js-anim .names-editorial.fade-in-element.is-visible {
 }
 
 .bendiciones-nombre {
-    margin: 20px 0 0;
+    margin: 0 0 20px;
     font-family: var(--cursive);
     font-size: clamp(2rem, 7vw, 3.05rem);
     line-height: 1.08;
-    background: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #4A7A9B 50%, #8BAFC8 75%, #C8D8E8 100%);
+    background: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #1A3A5C 50%, #8BAFC8 75%, #C8D8E8 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     color: transparent;
     animation: foilShine 10s cubic-bezier(.4, 0, .2, 1) infinite alternate;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.bendiciones-linea,
+.dresscode-code {
+    margin: 18px 0 0;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--rose-deep);
+}
+
+.dresscode-icon {
+    width: 90px;
+    margin-top: 10px;
 }
 
 .bendiciones-separador {
@@ -1285,7 +1307,7 @@ html.js-anim .names-editorial.fade-in-element.is-visible {
 .agenda-section .itinerary-time,
 .agenda-section .itinerary-divider,
 .agenda-section .itinerary-title {
-    background: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 24%, #1A3A5C 50%, #8BAFC8 76%, #C8D8E8 100%);
+    background: linear-gradient(120deg, #F8FCFF 0%, #EAF3FA 24%, #D8E8F4 50%, #EAF3FA 76%, #F8FCFF 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     color: transparent;
@@ -1293,9 +1315,8 @@ html.js-anim .names-editorial.fade-in-element.is-visible {
     text-shadow: 0 2px 8px rgba(30, 12, 19, 0.24);
 }
 
-.agenda-section .itinerary-title,
 .gift-option-title {
-    background: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #4A7A9B 50%, #8BAFC8 75%, #C8D8E8 100%);
+    background: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #1A3A5C 50%, #8BAFC8 75%, #C8D8E8 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     color: transparent;
@@ -1313,7 +1334,7 @@ html.js-anim .names-editorial.fade-in-element.is-visible {
 }
 
 .itinerary-icon i {
-    background: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 24%, #1A3A5C 50%, #8BAFC8 76%, #C8D8E8 100%);
+    background: linear-gradient(120deg, #F8FCFF 0%, #EAF3FA 24%, #D8E8F4 50%, #EAF3FA 76%, #F8FCFF 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     color: transparent;
@@ -1397,8 +1418,6 @@ html.js-anim .section-separador.visible .separador-foto-img {
     transform: translateY(0);
 }
 
-#gallery-auto,
-.gallery-auto-section,
 #separador-itinerario,
 #separador-regalos,
 #separador-momentos,
@@ -1819,7 +1838,6 @@ html.js-anim .section-separador.visible .separador-foto-img {
     z-index: 2;
     width: min(760px, 100%);
     margin: 0 auto;
-    border: 2px solid rgba(200, 173, 98, 0.66);
     background: url("images/FN.png") center/cover no-repeat;
     box-shadow: 0 20px 38px rgba(69, 33, 42, 0.2);
     padding: clamp(34px, 5.4vw, 56px) clamp(22px, 4.6vw, 46px);
@@ -1975,8 +1993,15 @@ html.js-anim .section-separador.visible .separador-foto-img {
 .wish-card-date,
 .wishes-empty {
     margin: 0;
-    color: var(--light);
     font-size: .88rem;
+}
+
+.wish-card-date {
+    color: var(--rose-deep);
+}
+
+.wishes-empty {
+    color: var(--light);
 }
 
 /* Gift modal */
@@ -2024,7 +2049,7 @@ html.js-anim .section-separador.visible .separador-foto-img {
 .gift-modal-title,
 .gift-option-title-envelope .gift-inicial,
 .gift-option-title-envelope .gift-resto {
-    background: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #4A7A9B 50%, #8BAFC8 75%, #C8D8E8 100%);
+    background: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #1A3A5C 50%, #8BAFC8 75%, #C8D8E8 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     color: transparent;
@@ -2373,7 +2398,7 @@ html.js-anim .section-separador.visible .separador-foto-img {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(40, 20, 28, 0.22);
+    background: rgba(13, 40, 64, 0.22);
     border: 1px solid rgba(255, 255, 255, 0.56);
     padding: 8px 12px;
     color: #fff;
@@ -2575,8 +2600,6 @@ html.js-anim .section.visible :is(.event-icon, .playlist-icon, .media-share-icon
         padding-bottom: var(--section-space-mobile);
     }
 
-    #gallery-auto,
-    .gallery-auto-section,
     #separador-itinerario,
     #separador-regalos,
     #separador-wishes,
@@ -2768,8 +2791,7 @@ html.js-anim .section.visible :is(.event-icon, .playlist-icon, .media-share-icon
         grid-template-columns: 1fr;
     }
 
-    .photo-separator-image,
-    .gallery-auto-slider {
+    .photo-separator-image {
         height: 58vh;
     }
 
@@ -2916,7 +2938,7 @@ html.js-anim .section.visible :is(.event-icon, .playlist-icon, .media-share-icon
 .invitado-tarjeta {
     background: url("images/FB.png") center/cover no-repeat;
     border: 6px solid transparent;
-    border-image: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #4A7A9B 50%, #8BAFC8 75%, #C8D8E8 100%) 1;
+    border-image: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #1A3A5C 50%, #8BAFC8 75%, #C8D8E8 100%) 1;
     box-shadow: 0 0 20px rgba(139, 175, 200, 0.45), 0 14px 32px rgba(20, 35, 52, 0.36);
 }
 
@@ -2931,7 +2953,7 @@ html.js-anim .section.visible :is(.event-icon, .playlist-icon, .media-share-icon
 .bendiciones-tarjeta {
     background: url("images/FB.png") center/cover no-repeat;
     border: 6px solid transparent;
-    border-image: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #4A7A9B 50%, #8BAFC8 75%, #C8D8E8 100%) 1;
+    border-image: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #1A3A5C 50%, #8BAFC8 75%, #C8D8E8 100%) 1;
     box-shadow: 0 0 20px rgba(139, 175, 200, 0.45), 0 14px 32px rgba(20, 35, 52, 0.36);
 }
 
@@ -2957,7 +2979,7 @@ html.js-anim .section.visible :is(.event-icon, .playlist-icon, .media-share-icon
 #agenda .agenda-panel {
     background: url("images/FN.png") center/cover no-repeat;
        border: 6px solid transparent;
-    border-image: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #4A7A9B 50%, #8BAFC8 75%, #C8D8E8 100%) 1;
+    border-image: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #1A3A5C 50%, #8BAFC8 75%, #C8D8E8 100%) 1;
     box-shadow: 0 0 20px rgba(139, 175, 200, 0.45), 0 14px 32px rgba(20, 35, 52, 0.36);
 }
 
@@ -3050,7 +3072,7 @@ html.js-anim .section.visible :is(.event-icon, .playlist-icon, .media-share-icon
 #events .event-card {
     background: url("images/FN.png") center/cover no-repeat;
     border: 6px solid transparent;
-    border-image: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #4A7A9B 50%, #8BAFC8 75%, #C8D8E8 100%) 1;
+    border-image: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #1A3A5C 50%, #8BAFC8 75%, #C8D8E8 100%) 1;
     box-shadow: 0 0 20px rgba(139, 175, 200, 0.45), 0 14px 32px rgba(20, 35, 52, 0.36);
 }
 
@@ -3078,7 +3100,7 @@ html.js-anim .section.visible :is(.event-icon, .playlist-icon, .media-share-icon
 #wishes-section .wishes-inner {
     background: url("images/FN.png") center/cover no-repeat !important;
     border: 6px solid transparent;
-    border-image: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #4A7A9B 50%, #8BAFC8 75%, #C8D8E8 100%) 1;
+    border-image: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #1A3A5C 50%, #8BAFC8 75%, #C8D8E8 100%) 1;
     box-shadow: 0 0 20px rgba(139, 175, 200, 0.45), 0 14px 32px rgba(20, 35, 52, 0.36);
 }
 
@@ -3103,7 +3125,7 @@ html.js-anim .section.visible :is(.event-icon, .playlist-icon, .media-share-icon
     overflow: hidden;
     background: url("images/FB.png") center/cover no-repeat;
     border: 6px solid transparent;
-    border-image: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #4A7A9B 50%, #8BAFC8 75%, #C8D8E8 100%) 1;
+    border-image: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #1A3A5C 50%, #8BAFC8 75%, #C8D8E8 100%) 1;
     box-shadow: 0 0 20px rgba(139, 175, 200, 0.45), 0 14px 32px rgba(20, 35, 52, 0.36);
     padding: 20px;
 }
@@ -3177,7 +3199,7 @@ html.js-anim .section.visible :is(.event-icon, .playlist-icon, .media-share-icon
     align-items: center;
     justify-content: center;
     border: 6px solid transparent;
-    border-image: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #4A7A9B 50%, #8BAFC8 75%, #C8D8E8 100%) 1;
+    border-image: linear-gradient(120deg, #C8D8E8 0%, #8BAFC8 25%, #1A3A5C 50%, #8BAFC8 75%, #C8D8E8 100%) 1;
     background: url("images/FB.png") center/cover no-repeat;
     box-shadow: 0 0 20px rgba(139, 175, 200, 0.45), 0 14px 32px rgba(20, 35, 52, 0.36);
     padding: 2.1em 1.6em;
