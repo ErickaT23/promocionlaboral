@@ -1135,6 +1135,7 @@ const translations = {
     btn_calendar: "Agregar al calendario",
     nuevo_texto: "Este logro no sería posible sin la dedicación de años, el apoyo incondicional de quienes creyeron en mí, y la determinación de nunca conformarse con menos de lo mejor.",
     nuevo_titulo: "¡Celebremos juntos!",
+    itinerary_title: "Itinerario",
     itinerary_item_1: "Cocktail Hour",
     itinerary_item_2: "Protocolo y gran anuncio",
     itinerary_item_3: "Cena",
@@ -1197,6 +1198,7 @@ const translations = {
     btn_calendar: "Add to calendar",
     nuevo_texto: "This milestone didn't happen overnight. It took years of dedication, the support of people who believed in me, and the conviction that settling is never an option.",
     nuevo_titulo: "Let's celebrate together!",
+    itinerary_title: "Schedule",
     itinerary_item_1: "Cocktail Hour",
     itinerary_item_2: "Formal program & big announcement",
     itinerary_item_3: "Dinner",
@@ -1303,6 +1305,18 @@ function applyTranslation(lang) {
     const key = 'itinerary_item_' + (index + 1);
     if (t[key] !== undefined) el.textContent = t[key];
   });
+
+  // Itinerary title
+  const itineraryTitle = document.querySelector('.itinerary-title');
+  if (itineraryTitle && t.itinerary_title) {
+    const word = t.itinerary_title;
+    const inicialEl = itineraryTitle.querySelector('.itinerary-inicial');
+    const restoEl = itineraryTitle.querySelector('.itinerary-resto');
+    if (inicialEl && restoEl) {
+      inicialEl.textContent = word.charAt(0);
+      restoEl.textContent = word.slice(1);
+    }
+  }
 
   const recepcionTitulo = document.querySelector('[data-i18n="recepcion_titulo"]');
   if (recepcionTitulo && t.recepcion_titulo) {
