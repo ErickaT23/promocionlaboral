@@ -16,8 +16,8 @@ const config = {
     },
 
     seo: {
-        titulo: "Anthony Jr. Lopez | Promoción Laboral 2026",
-        descripcion: "Celebración de Promoción Laboral de Anthony Jr. Lopez - 27 de Junio 2026",
+        titulo: "Anthony Jr. Lopez",
+        descripcion: "Celebrar los éxitos y la vida de Anthony Jr. Lopez - 27 de Junio 2026",
         autor: "Two Design"
     },
 
@@ -44,14 +44,14 @@ const config = {
 
     textos: {
         mensajeInvitado: "Tu presencia hace este logro aún más especial",
-        mensajePases: "Hemos reservado para ti {pases} lugar(es)"
+        mensajePases: "Hemos reservado para ti {pases}"
     },
 
     footer: {
-        hashtag: "#MisXVanaMaria",
+        hashtag: "#AnthonyJrLopez",
         instagramUrl: "https://instagram.com/thetwodesign",
         facebookUrl: "https://facebook.com/thetwodesign",
-        marcaTexto: "Diseno",
+        marcaTexto: "Diseño",
         marcaNombre: "Two Design",
         marcaUrl: "https://twodesign.com"
     }

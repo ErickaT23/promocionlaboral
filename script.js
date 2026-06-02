@@ -86,8 +86,8 @@ function createSiteConfig(remoteConfig) {
 
     return {
         seo: {
-            titulo: 'Anthony Jr. Lopez | Promoción Laboral 2026',
-            descripcion: 'Celebración de Promoción Laboral de Anthony Jr. Lopez - 27 de Junio 2026',
+            titulo: 'Anthony Jr. Lopez',
+            descripcion: 'Celebrar los éxitos y la vida de Anthony Jr. Lopez - 27 de Junio 2026',
             autor: 'Two Design',
             ...externalConfig.seo,
             ...normalizedRemoteConfig.seo
@@ -100,18 +100,18 @@ function createSiteConfig(remoteConfig) {
             ...normalizedRemoteConfig.pareja
         },
         musica: {
-            titulo: 'Nuestra Cancion',
+            titulo: 'Nuestra Canción',
             archivo: 'audio/nuestra-cancion.mp3',
             ...externalConfig.musica,
             ...normalizedRemoteConfig.musica
         },
         evento: {
             ceremonia: {
-                titulo: 'Ceremonia',
-                lugar: 'Capilla San Jose Obrero',
-                hora: '3:00 PM',
-                direccion: 'Av. Libertador 1234, San Jose',
-                ubicacionUrl: 'https://maps.google.com/?q=Capilla+San+Jose+Obrero',
+                titulo: '',
+                lugar: '',
+                hora: '',
+                direccion: '',
+                ubicacionUrl: '',
                 ...(localEvento.ceremonia || {}),
                 ...(remoteEvento.ceremonia || {})
             },
@@ -127,15 +127,15 @@ function createSiteConfig(remoteConfig) {
         },
         textos: {
             mensajeInvitado: 'Tu presencia hace este logro aún más especial',
-            mensajePases: 'Hemos reservado para ti {pases} lugar(es)',
+            mensajePases: 'Hemos reservado para ti {pases}',
             ...externalConfig.textos,
             ...normalizedRemoteConfig.textos
         },
         footer: {
-            hashtag: '#MisXVanaMaria',
+            hashtag: '#AnthonyJrLopez',
             instagramUrl: 'https://instagram.com/thetwodesign',
             facebookUrl: 'https://facebook.com/thetwodesign',
-            marcaTexto: 'Diseno',
+            marcaTexto: 'Diseño',
             marcaNombre: 'Two Design',
             marcaUrl: 'https://twodesign.com',
             ...externalConfig.footer,
@@ -377,7 +377,7 @@ const InvitadoApp = {
 
         const textoEl = document.createElement('span');
         textoEl.id = 'texto-lugares';
-        textoEl.textContent = parts[1] || '';
+        textoEl.textContent = Number(pases) === 1 ? ' lugar' : ' invitados';
 
         lugaresEl.replaceChildren(
             document.createTextNode(parts[0] || ''),
@@ -993,10 +993,10 @@ function initRSVP() {
         const selectedPasses = Math.max(1, Number(passesValue) || 1);
 
         if (respuesta === 'no') {
-            return 'Hola! Soy ' + guestName + ', lamentablemente no podré asistir a la celebración de Anthony Jr. Lopez el 27 de junio. ID: ' + guestId;
+            return 'Hola! Soy ' + guestName + ', lamentablemente no podré asistir a la celebración de Anthony Jr. Lopez el 27 de junio.';
         }
 
-        return 'Hola! Soy ' + guestName + ', confirmo mi asistencia a la celebración de Anthony Jr. Lopez el 27 de junio. Asistiré con ' + selectedPasses + ' pase(s). ID: ' + guestId;
+        return 'Hola! Soy ' + guestName + ', confirmo mi asistencia a la celebración de Anthony Jr. Lopez el 27 de junio. Asistiré con ' + selectedPasses + (selectedPasses === 1 ? ' pase' : ' pases') + '.';
     }
 
     function openWhatsappConfirmation(respuesta, passesValue) {

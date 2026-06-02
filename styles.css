@@ -805,11 +805,11 @@ html.js-anim .names-editorial.fade-in-element.is-visible {
 }
 
 .events-fondo {
-    background-image: url("images/FP.png");
+    background-image: url("images/FN.png");
 }
 
 .historia-fondo {
-    background-image: url("images/FP.png");
+    background-image: url("images/FN.png");
 }
 
 .historia-section,
@@ -859,7 +859,7 @@ html.js-anim .names-editorial.fade-in-element.is-visible {
     width: min(720px, 100%);
     margin: 0 auto;
     padding: clamp(34px, 5.2vw, 56px) clamp(22px, 4.5vw, 44px);
-    background: url("images/FP.png") center/cover no-repeat;
+    background: url("images/FN.png") center/cover no-repeat;
     box-shadow: 0 20px 38px rgba(69, 33, 42, 0.2);
     overflow: hidden;
 }
@@ -880,7 +880,7 @@ html.js-anim .names-editorial.fade-in-element.is-visible {
     width: min(760px, 100%);
     margin: 0 auto;
     padding: clamp(36px, 5.6vw, 62px) clamp(24px, 5vw, 52px);
-    background: url("images/FP.png") center/cover no-repeat;
+    background: url("images/FN.png") center/cover no-repeat;
     box-shadow: 0 20px 38px rgba(69, 33, 42, 0.2);
     overflow: hidden;
 }
@@ -1217,7 +1217,7 @@ html.js-anim .names-editorial.fade-in-element.is-visible {
 .agenda-section {
     padding: clamp(56px, 9vh, 88px) 18px;
     text-align: center;
-    background-image: url("images/FP.png");
+    background-image: url("images/FN.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1455,7 +1455,7 @@ html.js-anim .section-separador.visible .separador-foto-img {
     display: grid;
     gap: 16px;
     border: 2px solid rgba(200, 173, 98, 0.66);
-    background: url("images/FP.png") center/cover no-repeat;
+    background: url("images/FN.png") center/cover no-repeat;
     box-shadow: 0 20px 38px rgba(69, 33, 42, 0.2);
     padding: clamp(34px, 5.4vw, 56px) clamp(22px, 4.6vw, 46px);
     overflow: hidden;
@@ -1622,7 +1622,7 @@ html.js-anim .section-separador.visible .separador-foto-img {
     margin: 0 auto;
     padding: clamp(34px, 5.4vw, 56px) clamp(22px, 4.6vw, 46px);
     border: 2px solid rgba(200, 173, 98, 0.66);
-    background: url("images/FP.png") center/cover no-repeat;
+    background: url("images/FN.png") center/cover no-repeat;
     box-shadow: 0 20px 38px rgba(69, 33, 42, 0.2);
     overflow: hidden;
     display: grid;
@@ -1645,7 +1645,7 @@ html.js-anim .section-separador.visible .separador-foto-img {
 .section-inner.dresscode-inner,
 .gifts-inner {
     border: 2px solid rgba(200, 173, 98, 0.66);
-    background: url("images/FP.png") center/cover no-repeat;
+    background: url("images/FN.png") center/cover no-repeat;
     box-shadow: 0 20px 38px rgba(69, 33, 42, 0.2);
 }
 
@@ -1757,7 +1757,7 @@ html.js-anim .section-separador.visible .separador-foto-img {
     width: min(760px, 100%);
     margin: 0 auto;
     border: 2px solid rgba(200, 173, 98, 0.66);
-    background: url("images/FP.png") center/cover no-repeat;
+    background: url("images/FN.png") center/cover no-repeat;
     box-shadow: 0 20px 38px rgba(69, 33, 42, 0.2);
     padding: clamp(34px, 5.4vw, 56px) clamp(22px, 4.6vw, 46px);
     overflow: hidden;
@@ -1820,7 +1820,7 @@ html.js-anim .section-separador.visible .separador-foto-img {
     width: min(760px, 100%);
     margin: 0 auto;
     border: 2px solid rgba(200, 173, 98, 0.66);
-    background: url("images/FP.png") center/cover no-repeat;
+    background: url("images/FN.png") center/cover no-repeat;
     box-shadow: 0 20px 38px rgba(69, 33, 42, 0.2);
     padding: clamp(34px, 5.4vw, 56px) clamp(22px, 4.6vw, 46px);
     overflow: hidden;
@@ -2117,7 +2117,7 @@ html.js-anim .section-separador.visible .separador-foto-img {
 .rsvp-fondo {
     position: absolute;
     inset: 0;
-    background-image: url("images/FP.png");
+    background-image: url("images/FN.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
