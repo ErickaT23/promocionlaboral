@@ -1351,6 +1351,14 @@ html.js-anim .names-editorial.fade-in-element.is-visible {
     animation: itineraryIconFloat 2.4s ease-in-out infinite;
 }
 
+#agenda .itinerary-icon-img {
+    width: 1em !important;
+    height: 1em !important;
+    max-width: none !important;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+
 .agenda-section .itinerary-item {
     opacity: 0;
     transform: translateY(14px);

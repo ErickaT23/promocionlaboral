@@ -29,7 +29,7 @@ const config = {
 
     musica: {
         titulo: "Nuestra Canción",
-        archivo: "audio/nuestra-cancion.mp3"
+        archivo: "audio/goldenhour.mp3"
     },
 
     evento: {
