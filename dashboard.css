@@ -1,27 +1,27 @@
 :root {
-    --bg: #f7f4ef;
-    --paper: #fffaf6;
-    --paper-strong: #fffdfb;
-    --rose: #e2b5bd;
-    --rose-dark: #7f4a57;
-    --rose-deep: #7c3f4d;
-    --beige: #efe2d3;
-    --gold-1: #f2e6b3;
-    --gold-2: #d6c27a;
-    --gold-3: #9c8c49;
-    --ink: #2d1e22;
-    --ink-soft: #75646a;
-    --line: rgba(124, 63, 77, 0.2);
-    --line-soft: rgba(124, 63, 77, 0.11);
+    --bg: #F8F8F6;
+    --paper: #FFFFFF;
+    --paper-strong: #FAFAFA;
+    --rose: #C8D8E8;
+    --rose-dark: #1A3A5C;
+    --rose-deep: #0D2840;
+    --beige: #D4E4F0;
+    --gold-1: #EEF4F8;
+    --gold-2: #8BAFC8;
+    --gold-3: #4A7A9B;
+    --ink: #0D0D0D;
+    --ink-soft: #4A5568;
+    --line: rgba(13, 40, 64, 0.18);
+    --line-soft: rgba(13, 40, 64, 0.1);
     --shadow-card: 0 16px 36px rgba(101, 70, 76, 0.11);
     --shadow-soft: 0 8px 24px rgba(101, 70, 76, 0.08);
     --radius-lg: 24px;
     --radius-md: 18px;
     --radius-sm: 14px;
 
-    --font-title: "Pinyon Script", cursive;
-    --font-subtitle: "Cinzel", serif;
-    --font-body: "Playfair Display", serif;
+    --font-title: "Montserrat", sans-serif;
+    --font-subtitle: "Montserrat", sans-serif;
+    --font-body: "Cormorant Garant", serif;
 }
 
 * {

@@ -1,6 +1,6 @@
 const config = {
     event: {
-        defaultEventId: "misxv-ana-maria-2026",
+        defaultEventId: "promocion-anthonyjr-2026",
         eventIdParam: "eventId",
         legacyFallback: {
             read: false,
@@ -16,15 +16,15 @@ const config = {
     },
 
     seo: {
-        titulo: "Ana María Herrera Morales | Mis XV 2026",
-        descripcion: "Mis Quince Años de Ana María Herrera Morales - 10 de Octubre 2026",
+        titulo: "Anthony Jr. Lopez | Promoción Laboral 2026",
+        descripcion: "Celebración de Promoción Laboral de Anthony Jr. Lopez - 27 de Junio 2026",
         autor: "Two Design"
     },
 
     pareja: {
-        nombres: "Ana María & Herrera Morales",
-        fecha: "10-10-2026",
-        fechaVisible: "10.10.2026"
+        nombres: "Anthony Jr. Lopez",
+        fecha: "27-06-2026",
+        fechaVisible: "27.06.2026"
     },
 
     musica: {
@@ -33,31 +33,24 @@ const config = {
     },
 
     evento: {
-        ceremonia: {
-            titulo: "Ceremonia",
-            lugar: "Iglesia de La Merced",
-            hora: "3:00 PM",
-            direccion: "Antigua Guatemala",
-            ubicacionUrl: "https://maps.app.goo.gl/n9k4w8ixKS7Rr4uz6"
-        },
         recepcion: {
             titulo: "Recepción",
-            lugar: "Ruinas de la Recolección",
-            hora: "6:00 PM",
-            direccion: "Antigua Guatemala",
-            ubicacionUrl: "https://maps.app.goo.gl/VdUh997QMwtf9dH56"
+            lugar: "Vista Penthouse Ballroom & Catering",
+            hora: "7:00 PM",
+            direccion: "27-05 39th Ave, Long Island City, NY 11101, United States",
+            ubicacionUrl: "https://maps.apple/p/_pXDYRpviixPmz"
         }
     },
 
     textos: {
-        mensajeInvitado: "Eres muy especial para nosotros",
-        mensajePases: "Hemos reservado para ti {pases} lugares especiales"
+        mensajeInvitado: "Tu presencia hace este logro aún más especial",
+        mensajePases: "Hemos reservado para ti {pases} lugar(es)"
     },
 
     footer: {
         hashtag: "#MisXVanaMaria",
-        instagramUrl: "https://instagram.com/rocio.fernando.boda",
-        facebookUrl: "https://facebook.com/rociofernandoboda",
+        instagramUrl: "https://instagram.com/thetwodesign",
+        facebookUrl: "https://facebook.com/thetwodesign",
         marcaTexto: "Diseno",
         marcaNombre: "Two Design",
         marcaUrl: "https://twodesign.com"

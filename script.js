@@ -1,6 +1,20 @@
 document.documentElement.classList.add('js-anim');
 
+async function waitForRSVPDatabase(timeoutMs = 2400) {
+    const startedAt = Date.now();
+
+    while (!window.RSVPDatabase) {
+        if (Date.now() - startedAt >= timeoutMs) return false;
+        await new Promise(function(resolve) {
+            setTimeout(resolve, 60);
+        });
+    }
+
+    return true;
+}
+
 document.addEventListener('DOMContentLoaded', async function() {
+    await waitForRSVPDatabase();
     await hydrateSiteConfigForEvent();
     applySiteConfig();
     await InvitadoApp.init();
@@ -8,8 +22,9 @@ document.addEventListener('DOMContentLoaded', async function() {
     MusicaPlayer.init();
     initPortada();
     initScrollAnimations();
+    initSectionSeparadorRotativo();
+    initTrayectoriaLightbox();
     initCountdown();
-    initAutoGallery();
     initRSVP();
     initGiftModal();
 });
@@ -19,7 +34,7 @@ const externalConfig = window.config || {};
 function resolveEventId() {
     const eventConfig = externalConfig.event || {};
     const eventIdParam = String(eventConfig.eventIdParam || 'eventId').trim() || 'eventId';
-    const defaultEventId = String(eventConfig.defaultEventId || 'misxv-ana-maria-2026').trim() || 'misxv-ana-maria-2026';
+    const defaultEventId = String(eventConfig.defaultEventId || 'promocion-anthonyjr-2026').trim() || 'promocion-anthonyjr-2026';
     const params = new URLSearchParams(window.location.search || '');
     const paramValue = String(params.get(eventIdParam) || '').trim();
     const eventId = paramValue || defaultEventId;
@@ -71,16 +86,16 @@ function createSiteConfig(remoteConfig) {
 
     return {
         seo: {
-            titulo: 'Ana María Herrera Morales | Mis XV 2026',
-            descripcion: 'Mis Quince Años de Ana María Herrera Morales - 10 de Octubre 2026',
+            titulo: 'Anthony Jr. Lopez | Promoción Laboral 2026',
+            descripcion: 'Celebración de Promoción Laboral de Anthony Jr. Lopez - 27 de Junio 2026',
             autor: 'Two Design',
             ...externalConfig.seo,
             ...normalizedRemoteConfig.seo
         },
         pareja: {
-            nombres: 'Ana María & Herrera Morales',
-            fecha: '10-10-2026',
-            fechaVisible: '10.10.2026',
+            nombres: 'Anthony Jr. Lopez',
+            fecha: '27-06-2026',
+            fechaVisible: '27.06.2026',
             ...externalConfig.pareja,
             ...normalizedRemoteConfig.pareja
         },
@@ -101,25 +116,25 @@ function createSiteConfig(remoteConfig) {
                 ...(remoteEvento.ceremonia || {})
             },
             recepcion: {
-                titulo: 'Recepcion',
-                lugar: 'Finca Los Rosales',
-                hora: '6:00 PM',
-                direccion: 'Km 15, Carretera al Mar',
-                ubicacionUrl: 'https://maps.google.com/?q=Finca+Los+Rosales',
+                titulo: 'Recepción',
+                lugar: 'Vista Penthouse Ballroom & Catering',
+                hora: '7:00 PM',
+                direccion: '27-05 39th Ave, Long Island City, NY 11101, United States',
+                ubicacionUrl: 'https://maps.apple/p/_pXDYRpviixPmz',
                 ...(localEvento.recepcion || {}),
                 ...(remoteEvento.recepcion || {})
             }
         },
         textos: {
-            mensajeInvitado: 'Eres muy especial para nosotros',
-            mensajePases: 'Hemos reservado para ti {pases} lugares especiales',
+            mensajeInvitado: 'Tu presencia hace este logro aún más especial',
+            mensajePases: 'Hemos reservado para ti {pases} lugar(es)',
             ...externalConfig.textos,
             ...normalizedRemoteConfig.textos
         },
         footer: {
             hashtag: '#MisXVanaMaria',
-            instagramUrl: 'https://instagram.com/rocio.fernando.boda',
-            facebookUrl: 'https://facebook.com/rociofernandoboda',
+            instagramUrl: 'https://instagram.com/thetwodesign',
+            facebookUrl: 'https://facebook.com/thetwodesign',
             marcaTexto: 'Diseno',
             marcaNombre: 'Two Design',
             marcaUrl: 'https://twodesign.com',
@@ -207,8 +222,7 @@ function applySiteConfig() {
     const invitadoMensaje = document.querySelector('.invitado-mensaje');
     if (invitadoMensaje) invitadoMensaje.textContent = SiteConfig.textos.mensajeInvitado;
 
-    applyEventCard('.events-container .event-card:nth-child(1)', SiteConfig.evento.ceremonia);
-    applyEventCard('.events-container .event-card:nth-child(2)', SiteConfig.evento.recepcion);
+    applyEventCard('.events-container .event-card:nth-child(1)', SiteConfig.evento.recepcion);
     applyFooterConfig();
 }
 
@@ -268,11 +282,11 @@ function applyFooterConfig() {
 // ============================================
 const GuestConfig = {
     invitados: {
-        "1": { nombre: "María López", pases: 2 },
-        "2": { nombre: "Carlos Méndez", pases: 4 },
-        "3": { nombre: "Andrea Ruiz", pases: 1 },
-        "4": { nombre: "Familia García", pases: 6 },
-        "5": { nombre: "Pedro Sánchez", pases: 2 }
+        "1": { nombre: "Carlos Mendoza", pases: 2 },
+        "2": { nombre: "Sofia Ramirez", pases: 3 },
+        "3": { nombre: "Daniel Ortega", pases: 1 },
+        "4": { nombre: "Valeria Torres", pases: 2 },
+        "5": { nombre: "Javier Castillo", pases: 4 }
     },
     invitadoDefault: { nombre: "Invitado Especial", pases: 2 },
     paramId: 'id'
@@ -642,7 +656,7 @@ function initCountdown() {
 }
 
 function getEventDateFromConfig() {
-    return new Date('2026-10-10T00:00:00').getTime();
+    return new Date('2026-06-27T19:00:00').getTime();
 }
 
 function initAutoGallery() {
@@ -698,6 +712,101 @@ function initAutoGallery() {
 
     render(currentIndex);
     startAutoplay();
+}
+
+function initSectionSeparadorRotativo() {
+    const section = document.querySelector('.section-separador-rotativo');
+    if (!section) return;
+
+    const imageEl = section.querySelector('.separador-foto-img');
+    const raw = String(section.getAttribute('data-rotativo-images') || '').trim();
+    if (!imageEl || !raw) return;
+
+    const images = raw.split(',').map(function(item) {
+        return item.trim();
+    }).filter(Boolean);
+
+    if (images.length < 2) return;
+
+    let index = 0;
+    imageEl.src = images[index];
+
+    setInterval(function() {
+        index = (index + 1) % images.length;
+        imageEl.src = images[index];
+    }, 3200);
+}
+
+function initTrayectoriaLightbox() {
+    const buttons = Array.from(document.querySelectorAll('.trayectoria-open'));
+    const lightbox = document.getElementById('trayectoria-lightbox');
+    const imageEl = document.getElementById('trayectoria-lightbox-img');
+    const closeBtn = document.getElementById('trayectoria-lightbox-close');
+    const prevBtn = document.getElementById('trayectoria-prev');
+    const nextBtn = document.getElementById('trayectoria-next');
+
+    if (!buttons.length || !lightbox || !imageEl || !closeBtn || !prevBtn || !nextBtn) return;
+
+    const images = buttons.map(function(button) {
+        const img = button.querySelector('img');
+        return {
+            src: img ? img.getAttribute('src') : '',
+            alt: img ? img.getAttribute('alt') : 'Foto de trayectoria'
+        };
+    }).filter(function(item) {
+        return Boolean(item.src);
+    });
+
+    if (!images.length) return;
+
+    let currentIndex = 0;
+
+    function render(index) {
+        const total = images.length;
+        currentIndex = (index + total) % total;
+        imageEl.src = images[currentIndex].src;
+        imageEl.alt = images[currentIndex].alt;
+    }
+
+    function open(index) {
+        render(index);
+        lightbox.classList.add('active');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function close() {
+        lightbox.classList.remove('active');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    buttons.forEach(function(button, index) {
+        button.addEventListener('click', function() {
+            open(index);
+        });
+    });
+
+    prevBtn.addEventListener('click', function() {
+        render(currentIndex - 1);
+    });
+
+    nextBtn.addEventListener('click', function() {
+        render(currentIndex + 1);
+    });
+
+    closeBtn.addEventListener('click', close);
+
+    lightbox.addEventListener('click', function(event) {
+        if (event.target === lightbox) close();
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (!lightbox.classList.contains('active')) return;
+        if (event.key === 'Escape') close();
+        if (event.key === 'ArrowLeft') render(currentIndex - 1);
+        if (event.key === 'ArrowRight') render(currentIndex + 1);
+    });
 }
 
 function initRSVP() {
@@ -878,6 +987,24 @@ function initRSVP() {
     const guestData = InvitadoApp.getData() || {};
     const guestId = String(guestData.id || 'default');
 
+    function buildWhatsappMessage(respuesta, passesValue) {
+        const guestNameInput = document.getElementById('rsvp-name');
+        const guestName = String((guestNameInput && guestNameInput.value) || (guestData.nombre || '') || 'Invitado').trim();
+        const selectedPasses = Math.max(1, Number(passesValue) || 1);
+
+        if (respuesta === 'no') {
+            return 'Hola! Soy ' + guestName + ', lamentablemente no podré asistir a la celebración de Anthony Jr. Lopez el 27 de junio. ID: ' + guestId;
+        }
+
+        return 'Hola! Soy ' + guestName + ', confirmo mi asistencia a la celebración de Anthony Jr. Lopez el 27 de junio. Asistiré con ' + selectedPasses + ' pase(s). ID: ' + guestId;
+    }
+
+    function openWhatsappConfirmation(respuesta, passesValue) {
+        const text = encodeURIComponent(buildWhatsappMessage(respuesta, passesValue));
+        const waUrl = 'https://wa.me/16464620346?text=' + text;
+        window.open(waUrl, '_blank', 'noopener');
+    }
+
     async function checkConfirmedStatusOnLoad() {
         isCheckingStatus = true;
         if (submitBtn) submitBtn.disabled = true;
@@ -951,6 +1078,7 @@ function initRSVP() {
             const savedRecord = await saveConfirmation(payload);
             applyConfirmedState(savedRecord);
             showPopup(confirmationMessages[respuesta]);
+            openWhatsappConfirmation(respuesta, confirmedCount);
         } catch (error) {
             if (error && error.code === 'RSVP_ALREADY_CONFIRMED') {
                 const existingRecord = (error.existingData && error.existingData.confirmado)
