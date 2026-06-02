@@ -402,7 +402,8 @@ const InvitadoApp = {
             for (let i = 1; i <= totalPases; i += 1) {
                 const option = document.createElement('option');
                 option.value = String(i);
-                option.textContent = i === 1 ? '1 adulto' : i + ' adultos';
+                const t = translations[currentLang] || translations['es'];
+                option.textContent = i + ' ' + (i === 1 ? t.guest_singular : t.guest_plural);
                 guestsSelect.appendChild(option);
             }
 
@@ -866,7 +867,7 @@ function initRSVP() {
         const shouldShow = Boolean(responseYes && responseYes.checked);
         guestCountWrapper.style.display = shouldShow ? 'block' : 'none';
         guestCountSelect.disabled = !shouldShow || formLocked;
-        guestCountSelect.required = shouldShow && !formLocked;
+        guestCountSelect.required = false;
 
         if (!shouldShow) {
             const firstOption = guestCountSelect.options[0];
@@ -1170,6 +1171,8 @@ const translations = {
     rsvp_si: "Sí, con mucho gusto",
     rsvp_no: "No, lamentablemente no podré",
     rsvp_label_pases: "Número de adultos",
+    guest_singular: "pase",
+    guest_plural: "pases",
     btn_rsvp: "Confirmar asistencia",
     rsvp_popup_si: "Gracias por confirmar tu asistencia. Te vemos pronto.",
     rsvp_popup_no: "Lamentamos que no puedas acompañarnos, te extrañaremos.",
@@ -1233,6 +1236,8 @@ const translations = {
     rsvp_si: "Absolutely, I'll be there",
     rsvp_no: "I won't be able to make it",
     rsvp_label_pases: "Number of adults",
+    guest_singular: "pass",
+    guest_plural: "passes",
     btn_rsvp: "Confirm attendance",
     rsvp_popup_si: "Thank you for confirming! We can't wait to celebrate with you.",
     rsvp_popup_no: "We're sorry you won't be able to make it — you'll be missed.",
@@ -1410,6 +1415,18 @@ function applyTranslation(lang) {
   const wishesEmpty = document.querySelector('.wishes-empty');
   if (wishesEmpty && t.wishes_empty) {
     wishesEmpty.textContent = t.wishes_empty;
+  }
+
+  // Actualizar opciones del select de pases
+  const guestsSelect = document.getElementById('guest-count');
+  if (guestsSelect && guestsSelect.options.length > 0) {
+    const t = translations[lang];
+    Array.from(guestsSelect.options).forEach(function(option) {
+      const val = Number(option.value);
+      if (!isNaN(val) && val > 0) {
+        option.textContent = val + ' ' + (val === 1 ? t.guest_singular : t.guest_plural);
+      }
+    });
   }
 
   const langBtn = document.getElementById('lang-fab-btn');
