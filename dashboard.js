@@ -374,6 +374,8 @@ function renderDesktopTable(rows, emptyMessage) {
 
     rows.forEach((row) => {
         const tr = document.createElement("tr");
+        const responseValue = row.respuesta === "si" || row.respuesta === "no" ? row.respuesta : "pendiente";
+        tr.className = "confirmation-row confirmation-row--" + responseValue;
 
         const idTd = document.createElement("td");
         idTd.className = "id-cell";
@@ -388,7 +390,6 @@ function renderDesktopTable(rows, emptyMessage) {
 
         const responseTd = document.createElement("td");
         const badge = document.createElement("span");
-        const responseValue = row.respuesta === "si" || row.respuesta === "no" ? row.respuesta : "pendiente";
         badge.className = "status-badge status-badge--" + responseValue;
         badge.textContent = toResponseLabel(responseValue);
         responseTd.appendChild(badge);
@@ -430,7 +431,8 @@ function renderMobileCards(rows, emptyMessage) {
 
     rows.forEach((row) => {
         const card = document.createElement("article");
-        card.className = "confirmation-card";
+        const responseValue = row.respuesta === "si" || row.respuesta === "no" ? row.respuesta : "pendiente";
+        card.className = "confirmation-card confirmation-card--" + responseValue;
 
         const nameEl = document.createElement("h3");
         nameEl.className = "confirmation-card-name";
@@ -445,7 +447,6 @@ function renderMobileCards(rows, emptyMessage) {
         const statusWrap = document.createElement("div");
         statusWrap.className = "confirmation-card-status";
 
-        const responseValue = row.respuesta === "si" || row.respuesta === "no" ? row.respuesta : "pendiente";
         const badge = document.createElement("span");
         badge.className = "status-badge status-badge--" + responseValue;
         badge.textContent = toResponseLabel(responseValue);

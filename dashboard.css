@@ -406,12 +406,36 @@ body {
     transition: background-color 0.2s ease;
 }
 
+.confirmations-table tbody tr.confirmation-row--pendiente {
+    background: #707070;
+}
+
+.confirmations-table tbody tr.confirmation-row--no {
+    background: #0D2840;
+}
+
 .confirmations-table tbody tr:nth-child(even) {
     background: rgba(255, 255, 255, 0.08);
 }
 
+.confirmations-table tbody tr.confirmation-row--pendiente:nth-child(even) {
+    background: #707070;
+}
+
+.confirmations-table tbody tr.confirmation-row--no:nth-child(even) {
+    background: #0D2840;
+}
+
 .confirmations-table tbody tr:hover {
     background: rgba(255, 255, 255, 0.14);
+}
+
+.confirmations-table tbody tr.confirmation-row--pendiente:hover {
+    background: #707070;
+}
+
+.confirmations-table tbody tr.confirmation-row--no:hover {
+    background: #0D2840;
 }
 
 .confirmations-table tbody td {
@@ -557,6 +581,14 @@ body {
     padding: 0.95rem;
 }
 
+.confirmation-card--pendiente {
+    background: #707070;
+}
+
+.confirmation-card--no {
+    background: #0D2840;
+}
+
 .confirmation-card + .confirmation-card {
     margin-top: 0.72rem;
 }
@@ -606,7 +638,6 @@ body {
 .summary-card,
 .dashboard-table-panel,
 .table-wrapper,
-.confirmation-card,
 .mobile-empty-state,
 .table-search-input,
 .table-clear-btn,
