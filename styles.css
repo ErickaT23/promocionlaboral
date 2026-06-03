@@ -2282,6 +2282,16 @@ html.js-anim .section-separador.visible .separador-foto-img {
     margin-bottom: 22px;
 }
 
+.trayectoria-text {
+    width: min(680px, 100%);
+    margin: 0 auto 24px;
+    color: rgba(248, 252, 255, 0.9);
+    font-family: var(--body);
+    font-size: clamp(1rem, 2.4vw, 1.18rem);
+    line-height: 1.55;
+    text-align: center;
+}
+
 .trayectoria-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
