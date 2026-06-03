@@ -1577,7 +1577,7 @@ function renderWishes(data) {
     : Object.values(data || {});
 
   if (!wishes || wishes.length === 0) {
-    wishesContainer.innerHTML = '<p class="wishes-empty">Aún no hay deseos. Sé el primero en dejarnos uno.</p>';
+    wishesContainer.innerHTML = '<p class="wishes-empty">Aún no hay deseos. Sé el primero en dejarme uno.</p>';
     return;
   }
 
@@ -1586,7 +1586,7 @@ function renderWishes(data) {
     .sort((a, b) => Number(b.timestamp || 0) - Number(a.timestamp || 0));
 
   if (safeWishes.length === 0) {
-    wishesContainer.innerHTML = '<p class="wishes-empty">Aún no hay deseos. Sé el primero en dejarnos uno.</p>';
+    wishesContainer.innerHTML = '<p class="wishes-empty">Aún no hay deseos. Sé el primero en dejarme uno.</p>';
     return;
   }
 
