@@ -1281,7 +1281,7 @@ const translations = {
     gifts_title: "Envelope Shower",
     gifts_text: "Your presence is the greatest gift of all. Should you wish to offer a personal gesture, we'll have an envelope shower to receive your kind tokens of appreciation.",
     trayectoria_title: "My Journey",
-    trayectoria_text: "A journey through these past few years filled with experiences, growth, and dedication.",
+    trayectoria_text: "Years of growth, learning, and unforgettable experiences that shaped who I am today.",
     playlist_title: "Playlist",
     playlist_text: "Help set the tone for the evening. Add the song that belongs on tonight's soundtrack — the one that can't be left out.",
     btn_playlist: "Add a song",
