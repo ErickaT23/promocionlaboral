@@ -1296,7 +1296,7 @@ const translations = {
     btn_wish_submit: "Send",
     wishes_empty: "No wishes yet. Be the first to leave one.",
     rsvp_title: "RSVP",
-    rsvp_intro: "Your presence would make this evening truly unforgettable. Please confirm your attendance by June 16th.",
+    rsvp_intro: "Your presence would make this evening truly unforgettable. Please confirm your attendance by June 19th.",
     rsvp_label_nombre: "Guest name",
     rsvp_label_asistencia: "Will you be joining us?",
     rsvp_si: "Absolutely, I'll be there",
