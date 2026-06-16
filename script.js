@@ -1230,7 +1230,7 @@ const translations = {
     btn_wish_submit: "Enviar deseo",
     wishes_empty: "Aún no hay deseos. Sé el primero en dejarme uno.",
     rsvp_title: "Confirmar Asistencia",
-    rsvp_intro: "Tu presencia hará este día aún más especial. Por favor confirma tu asistencia antes del 16 de Junio.",
+    rsvp_intro: "Tu presencia hará este día aún más especial. Por favor confirma tu asistencia antes del 19 de Junio.",
     rsvp_label_nombre: "Nombre del invitado",
     rsvp_label_asistencia: "Asistirás",
     rsvp_si: "Sí, con mucho gusto",
